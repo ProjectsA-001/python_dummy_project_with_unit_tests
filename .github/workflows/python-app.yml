@@ -76,7 +76,7 @@ jobs:
         echo "RUNNER_TOOL_CACHE: $RUNNER_TOOL_CACHE"
     - name: Print variables using contextual syntax
       run: |
-        echo "CI: ${{ ci }}"
+        # echo "CI: ${{ ci }}"
         echo "GITHUB_WORKFLOW: ${{ github.workflow }}"
         echo "GITHUB_RUN_ID: ${{ github.run_id }}"
         echo "GITHUB_RUN_NUMBER: ${{ github.run_number }}"
