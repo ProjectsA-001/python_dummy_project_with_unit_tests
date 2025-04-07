@@ -76,14 +76,14 @@ jobs:
         echo "RUNNER_TOOL_CACHE: $RUNNER_TOOL_CACHE"
     - name: Print variables using contextual syntax
       run: |
-        echo "CI: ${{ env.CI }}"
+        echo "CI: ${{ ci }}"
         echo "GITHUB_WORKFLOW: ${{ github.workflow }}"
         echo "GITHUB_RUN_ID: ${{ github.run_id }}"
         echo "GITHUB_RUN_NUMBER: ${{ github.run_number }}"
         echo "GITHUB_RUN_ATTEMPT: ${{ github.run_attempt }}"
-        echo "GITHUB_JOB: ${{ job.name }}"
+        echo "GITHUB_JOB: ${{ github.job }}"
         echo "GITHUB_ACTION: ${{ github.action }}"
-        echo "GITHUB_ACTION_PATH: ${{ env.GITHUB_ACTION_PATH }}"
+        echo "GITHUB_ACTION_PATH: ${{ github.action_path }}"
         echo "GITHUB_ACTION_REPOSITORY: ${{ github.action_repository }}"
         echo "GITHUB_ACTOR: ${{ github.actor }}"
         echo "GITHUB_ACTOR_ID: ${{ github.actor_id }}"
@@ -92,8 +92,8 @@ jobs:
         echo "GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}"
         echo "GITHUB_REPOSITORY_OWNER_ID: ${{ github.repository_owner_id }}"
         echo "GITHUB_EVENT_NAME: ${{ github.event_name }}"
-        echo "GITHUB_EVENT_PATH: ${{ env.GITHUB_EVENT_PATH }}"
-        echo "GITHUB_WORKSPACE: ${{ env.GITHUB_WORKSPACE }}"
+        echo "GITHUB_EVENT_PATH: ${{ github.event_path }}"
+        echo "GITHUB_WORKSPACE: ${{ github.workspace }}"
         echo "GITHUB_SHA: ${{ github.sha }}"
         echo "GITHUB_REF: ${{ github.ref }}"
         echo "GITHUB_REF_NAME: ${{ github.ref_name }}"
@@ -107,8 +107,8 @@ jobs:
         echo "RUNNER_NAME: ${{ runner.name }}"
         echo "RUNNER_OS: ${{ runner.os }}"
         echo "RUNNER_ARCH: ${{ runner.arch }}"
-        echo "RUNNER_TEMP: ${{ env.RUNNER_TEMP }}"
-        echo "RUNNER_TOOL_CACHE: ${{ env.RUNNER_TOOL_CACHE }}"
+        echo "RUNNER_TEMP: ${{ runner.temp }}"
+        echo "RUNNER_TOOL_CACHE: ${{ runner.tool_cache }}"
       shell: bash
     - name: Print variables using JSON path syntax (${{ fromJSON(env.GITHUB_EVENT_JSON) }})
       run: env
