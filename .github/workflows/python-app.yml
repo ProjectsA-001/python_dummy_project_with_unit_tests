@@ -111,3 +111,13 @@ jobs:
       shell: bash
     - name: Print variables using JSON path syntax (${{ fromJSON(env.GITHUB_EVENT_JSON) }})
       run: env
+    - name: printing variables at diferent levels orgs, repo, environ.
+      run: |
+        echo "${{ vars.ORG_FLAG }}"
+    - name: printing variables at diferent levels orgs, repo, environ.
+      run: |
+        echo "${{ vars.REPO_FLAG }}"
+    - name: printing variables at diferent levels orgs, repo, environ.
+      if: ${{ fromJSON(vars.ENVIRON_FLAG) }}
+      run: |
+        echo "${{ vars.ENVIRON_FLAG }}"
