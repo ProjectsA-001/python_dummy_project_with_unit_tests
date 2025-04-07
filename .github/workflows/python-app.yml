@@ -109,3 +109,5 @@ jobs:
         echo "RUNNER_ARCH: ${{ env.RUNNER_ARCH }}"
         echo "RUNNER_TEMP: ${{ env.RUNNER_TEMP }}"
         echo "RUNNER_TOOL_CACHE: ${{ env.RUNNER_TOOL_CACHE }}"
+    - name: Print variables using JSON path syntax (${{ fromJSON(env.GITHUB_EVENT_JSON) }})
+      run: env
