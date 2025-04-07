@@ -9,13 +9,11 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
 permissions:
   contents: read
-
 jobs:
   build:
-
+    environment: ${{ github.ref_name }}
     runs-on: ubuntu-latest
 
     steps:
