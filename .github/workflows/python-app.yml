@@ -41,7 +41,7 @@ jobs:
         ls -la
     - name: Print variables using shell syntax ($VARIABLE)
       run: |
-        echo "CI: $CI"
+        # echo "CI: $CI"
         echo "GITHUB_WORKFLOW: $GITHUB_WORKFLOW"
         echo "GITHUB_RUN_ID: $GITHUB_RUN_ID"
         echo "GITHUB_RUN_NUMBER: $GITHUB_RUN_NUMBER"
