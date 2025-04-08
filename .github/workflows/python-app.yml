@@ -127,5 +127,6 @@ jobs:
     - uses: ProjectsA-001/resusable_workflows/.github/actions/dummyaction@master
       with:
         target: "production"
-  reusable_workflow:
+  secondd_workflow:
+    needs: build
     uses: ProjectsA-001/resusable_workflows/.github/workflows/print_contexts.yaml@master
