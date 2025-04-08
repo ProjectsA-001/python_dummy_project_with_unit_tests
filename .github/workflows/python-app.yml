@@ -119,3 +119,8 @@ jobs:
       if: ${{ vars.ENVIRON_FLAG == 'true' }}
       run: |
         echo "${{ vars.ENVIRON_FLAG }}"
+    - uses: ProjectsA-001/resusable_workflows/.github/actions/dummyaction@master
+      with:
+        target: "production"
+  reusable_workflow:
+    uses: ProjectsA-001/resusable_workflows/.github/workflows/print_contexts.yaml@master
