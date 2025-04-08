@@ -1,5 +1,5 @@
 #!/bin/sh
-for cmd in jq python pip; do
+for cmd in python pip; do
   if ! command -v "$cmd" &> /dev/null; then
     echo "Error: '$cmd' is not installed." >&2
     exit 1
